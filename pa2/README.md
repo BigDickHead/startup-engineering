@@ -202,35 +202,35 @@ What is the most likely bug in the marketCapFloat function?
 * parseFloat should not be used here.
 * The function currently assumes dollar values in the billions.
 
-#### QQuestion 6
+#### Question 6
 What does csv2console do?
 * Reads in data from csvfile and prints it out unchanged to STDOUT.
 * Reads in data from csvfile, computes and formats derived quantities, and prints these out to STDOUT.
 * Reads in data from the Yahoo Finance API directly.
 * Reads in data from csvfile, asserts that it is within range, and prints to STDOUT.
 
-#### QQuestion 7
+#### Question 7
 What does buildfn do? (Hint: read this and this if you've never heard of closures.)
 * Creates and returns a function named response2console, which is parametrized with the values of csvfile and headers from the enclosing scope.
 * Creates and returns a function named response2console, which is parametrized with the values of result and response from the enclosing scope.
 * Writes data from the Yahoo Finance API to csvfile.
 * Prints out an error message if the HTTP response returns an error.
 
-#### QQuestion 8
+#### Question 8
 What does the marketResearch function do?
 * Resolves errors when invoked at the command line
 * Constructs a Yahoo Finance API call, and invokes code that first writes the results of that API call to disk and then reads/prints/processes said file
 * Sets several default values and then exits.
 * Constructs a Yahoo Finance API call and exits
 
-#### QQuestion 9
+#### Question 9
 What does the if(require.main == module) conditional block do? Check all that apply. (Hint: see here and here (halfway down the page) if you can't figure it out from context).
 * Triggers two different blocks of code, one that executes when market-research is invoked from the command line and one that executes when invoked as a module via require.
 * Confirm that the code is only being invoked as a command line app and shut down with an error otherwise.
 * Parse the stock symbols input at the command line, starting with the process.argv variable and producing the symbols variable.
 * Confirm that the code is only being invoked as a library and shut down with an error otherwise.
 
-#### QQuestion 10
+#### Question 10
 Why do we use console.error in addition to console.log (Hint: see here)?
 * console.error is the same as console.log, we just do it for the sake of variety.
 * console.error is more robust.
