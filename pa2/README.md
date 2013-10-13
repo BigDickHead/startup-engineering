@@ -168,17 +168,17 @@ One of the most important skills when doing a startup is learning how to learn. 
 
 #### Question 1
 Which of the following statements is true about our use of npm and chmod before executing ./market-research.js?
--Neither is essential, but doing this a useful practice.
--Using chmod to change executability is essential to invoking the script at the command line, but using npm to install the libraries is not.
--We need to both install necessary libraries and make the file executable before executing it.
--Installing the libraries via npm is essential to invoking the script at the command line, but changing executability via chmod (or a similar command) is not.
+- Neither is essential, but doing this a useful practice.
+- Using chmod to change executability is essential to invoking the script at the command line, but using npm to install the libraries is not.
+- We need to both install necessary libraries and make the file executable before executing it.
+- Installing the libraries via npm is essential to invoking the script at the command line, but changing executability via chmod (or a similar command) is not.
 #### Question 2
 After looking at the source of market-research.js, what variable holds the arguments sent to the script when invoked at the command line?
--console.log
--require.main
--process.argv
--columns
-#### QQuestion 3
+* console.log
+* require.main
+* process.argv
+* columns
+#### Question 3
 What do the lines like symbols = symbols || SYMBOLS_DEFAULT; do?
 -This is a JS idiom for setting default arguments.
 -This is a JS idiom for checking that arguments are within a valid range.
