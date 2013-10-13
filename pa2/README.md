@@ -8,6 +8,7 @@ We're going to be working with market-research.js , a simple script which one ca
 
 First, execute the following commands to download and run the script.
 
+```
   # Download and make executable
   wget https://spark-public.s3.amazonaws.com/startup/code/market-research.js
   wget https://spark-public.s3.amazonaws.com/startup/code/market-research-wrapper.js
@@ -38,12 +39,14 @@ First, execute the following commands to download and run the script.
   node -e "require('./market-research.js')"
   node -e "var mr = require('./market-research.js'); mr.marketResearch();"
   node -e "var mr = require('./market-research.js'); mr.marketResearch([\"FB\",\"ORCL\"]);"
+```
 
 This illustrates several different ways to use the code: as a script explicitly with node, as a standalone command-line executable, and most interestingly as a module in another piece of code (market-research-wrapper.js). This is a very useful technique: develop and debug your code independently as a standalone script, with an eye towards externalizing one (or perhaps a few) key routines for invocation as a library by the larger codebase.
 
 Here is the code itself:
-market-research.js
+#### market-research.js
 
+```
 #!/usr/bin/env node
 /*
 Use the Yahoo Finance CSV API to do some basic market research calculations.
@@ -138,14 +141,17 @@ if(require.main == module) {
 }
 
 exports.marketResearch = marketResearch;
+```
 
 And here is a wrapper that shows how to invoke this as a module. We're able to do so because of the last line in market-research.js (namely exports.marketResearch = marketResearch;):
-market-research-wrapper.js
+#### market-research-wrapper.js
 
+```
 #!/usr/bin/env node
 // Example of using market-research.js as a module
 var mr = require('./market-research.js'); 
 mr.marketResearch(["FB", "ORCL"]);
+```
 
 The best way to understand what the code does is to download it, edit it, change the arguments around, and so on. The quiz questions will walk you through the properties of individual functions.
 Hints and Tips
